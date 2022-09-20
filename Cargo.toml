@@ -1,0 +1,17 @@
+[package]
+name = "edt_utbm"
+version = "0.1.0"
+edition = "2021"
+authors = ["Thomas Girod"]
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[dependencies]
+reqwest = { version = "0.11", features = ["blocking", "cookies", "json"] }
+scraper = "0.13.0"
+ego-tree = "0.6.2"
+rpassword = "7.0.0"
